@@ -118,3 +118,10 @@ if __name__ == "__main__":
 
             else:
                 speak("Sorry Luna, I didn’t understand that. Can you say it again?")
+
+elif 'take note' in query:
+    speak("What should I write?")
+    note = takeCommand()
+    with open("notes.txt", "a") as f:
+        f.write(note + "\n")
+    speak("Note saved")
